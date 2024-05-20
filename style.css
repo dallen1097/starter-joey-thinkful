@@ -1,0 +1,69 @@
+/* styling entire header */
+header {
+    background-color: #0B1C51;
+    margin-bottom: 40px;
+}
+/* styling the title */
+header h1 {
+    color: white;
+    font-size: 52px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+/* styling the nav container */
+header nav {
+    display: flex;
+    justify-content: center;
+}
+/* styling the list in the nav container */
+header nav ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+/* styling the items in the list in the nav container */
+header nav ul li a {
+    color: white;
+    font-family: Montserrat;
+    text-decoration: none;
+    margin: 0 20px 0 0;
+}
+/* styling the last item in the list in the nav container to get correct centering */
+header nav ul li:last-child a {
+    margin-right: 0;
+}
+
+/* mobile media query entered here */
+
+@media all and (min-width: 600px) {
+    header {
+      /* Changes the default setting from `block` to `flex`. */
+      display: flex;
+      /* Pushes the title and nav to opposite sides of the browser*/
+      justify-content: space-between;
+      /* removes top and bottom padding, adds 30 pixels to left and right padding */
+      padding: 0 30px;
+    }
+  
+    header h1 {
+      /* Sets 14 pixels of margin above and below the `h1` and sets 
+          0 pixels of margin to the left and right. */
+      margin: 14px 0;
+      /* Removes or sets 0 pixels of padding above the `h1`. */
+      padding-top: 0;
+      /* Changes font size to 48 pixels */
+      font-size: 48px;
+    }
+  
+    header nav {
+      /*
+        Pushes the navigation container down by 8 pixels
+      */
+      margin-top: 8px;
+    }
+    /* hover only available on desktop devices so the hover action is added in the media query */
+    header nav ul li a:hover {
+      /* changes color to a different white */
+      color: #bdbdbd;
+    }
+  }
